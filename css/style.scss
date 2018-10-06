@@ -1,0 +1,152 @@
+
+/// IMPORTS /// 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600');
+
+
+/// VARIABLES ///
+
+$prim-font: 'Open Sans', sans-serif;
+$sec-font:	'Open Sans Condensed', sans-serif;
+$prim-color: #171E24;
+$sec-color: #C5C5C5;
+
+
+// GENERAL STYLES AND TYPO //
+
+body {
+	font-family: $prim-font;
+	color: $sec-color;
+	background: $prim-color;
+}
+
+.container {
+	transition: 0.2s;
+}
+
+.movie-container {
+	> div {
+		background: #111111;
+		margin: 10px 0;
+		padding: 10px;
+		min-height: 250px;
+	}
+}
+
+
+
+// HEADER & FOOTER //
+.top-header, .footer {
+	text-align:right;
+	background:#000;
+	padding-right: 30px;
+}
+
+#navbar-top {
+	background: #343a40;
+}
+
+.dropdown {
+  text-align: right; }
+
+.headline {
+  margin-top: 1rem;
+}
+
+/// CONTENT ///
+
+.teaser-text {
+	font-size: 0.8rem;
+	font-family: $prim-font;
+	padding-right: 50px;
+
+	h3 {
+		font-size: 1.2rem;
+	}
+	.genre .shortinfo {
+
+	}
+
+	.summary {
+		font-family: $sec-font;
+		font-size: 0.9rem;
+	}
+	.fas {
+		font-size: 1.4rem;
+		line-height: 40px;
+	}
+	.fas:hover {
+		transition: 0.2s;
+		transform: scale(1.3);
+		cursor: pointer;
+	}
+
+	.fa-thumbs-up {
+		padding-left: 12px;
+		float: left;
+	}
+
+	.fa-thumbs-up:hover {
+		color: #5cb85c;
+	}
+
+		.fa-thumbs-down:hover {
+		color: #c9302c;
+	}
+
+	.result-likes, .result-dislikes {
+		float:right;
+		font-size: 1rem;
+		color: #fff;
+		border-radius: 50%;
+		text-align: center;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		cursor: default;
+	}
+
+	.result-likes {
+		background: #5cb85c;
+		margin-left: 15px;
+		border: 0;
+	}
+
+	.result-dislikes {
+		background: #c9302c;
+	}
+
+}
+
+.movie-content img {
+	width: 100%;
+}	
+
+.teaser-text button {
+	background: none;
+	color: $sec-color;
+	border: none;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.filter {
+	font-size: 0.8rem;
+	text-align: right;
+	a{
+		color:$sec-color;
+	}
+	a:hover {
+	    color: rgba(255,255,255,.9);
+	    text-decoration: none;
+	}
+}
+
+.feature-img {
+	width: 100%;
+}
+
+
+
+
