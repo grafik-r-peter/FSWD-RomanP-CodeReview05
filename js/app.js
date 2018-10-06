@@ -7,7 +7,8 @@ console.log(data);
 $(document).ready(function() {
 
     for (i = 0; i < data.movies.length; i++) {
-    	$('.movie-content').prepend(' <!-- ITEM --><div class="movie-container col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 ' + data.movies[i].genre +'" data-year="' + data.movies[i].year +'" data-length="' + data.movies[i].length +'" data-likes="' + data.movies[i].likes + ' ">' + 
+    	$('.movie-content').prepend('<div class="movie-container col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 ' + data.movies[i].genre +
+                                    '" data-year="' + data.movies[i].year +'" data-length="' + data.movies[i].length +'" data-likes="' + data.movies[i].likes + ' ">' + 
     								'<div><div class="row"><div class="col-4"><img class="float-left" src="' + 
     								data.movies[i].image + '" alt="' + data.movies[i].title +
     								'"></div><div class="teaser-text col-8 "><h3 class="movie-title">' + 
@@ -28,11 +29,11 @@ $(".button").on("click", function() {
     var oldLikes = $button.parent().find("input").val();
 
     if ($button.text() == '') {
-  	  var newLikes = parseFloat(oldLikes) + 1;
+  	  var newLikes = parseInt(oldLikes) + 1;
   	}
 
     $button.parent().find("input").val(newLikes);
-
+    $button.parent().parent().parent().parent()[0].dataset.likes = newLikes;
 });
 
 
@@ -88,7 +89,6 @@ $('.cat-doc').on('click', function() {
 $('.cat-all').on('click', function(){
             $('.Drama, .Comedy, .Documentary').show(300);
         })
-
 
 });
 
