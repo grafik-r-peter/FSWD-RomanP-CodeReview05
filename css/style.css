@@ -67,7 +67,7 @@ body {
   .teaser-text .result-dislikes {
     background: #c9302c; }
 
-.movie-content img {
+.movie-container img {
   width: 100%; }
 
 .teaser-text button {
@@ -89,5 +89,45 @@ button:focus {
 
 .feature-img {
   width: 100%; }
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  z-index: 1; }
+
+#expandContent {
+  position: fixed;
+  width: 80% !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 2; }
+
+#expandContent > div {
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.3); }
+
+.closeOverlay {
+  display: none;
+  float: right; }
+
+#expandContent .button, #expandContent .expand, #expandContent .result-likes {
+  display: none; }
+#expandContent .description {
+  display: block; }
+#expandContent .closeOverlay {
+  display: block; }
+
+.description {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

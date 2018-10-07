@@ -80,7 +80,7 @@ var data = {
       }, {
            "title":"Last Exit Reno",
            "movieID": 008,
-           "genre": "Crime",
+           "genre": "Drama",
            "year": 2017,
            "length": 102,
            "image":"img/lastexitreno.jpg",
