@@ -27,23 +27,22 @@ $(document).ready(function() {
 /// OVERLAY ///
 $(".expand").on("click", function() {
     var $expand = $(this);
-    $expand.parent().parent().parent().parent().parent()
-    .prependTo("body")
+    $expand.closest('.movie-container')
+    .clone().prependTo("body")
     .attr('id', 'expandContent')
     .removeClass('col-sm-6 col-md-6 col-lg-6 col-xl-6')
     .hide().fadeIn(300);
-    $expand.parent().parent().parent().parent().parent().parent().find('#overlay').css('display', 'block');
-
+    $expand.closest('body').find('#overlay').css('display', 'block');
+    close(); // CALL THE CLOSE FUNCTION SO EVENT HANDLERS ARE GENERATED 
 });
 
 /// CLOSE OVERLAY ///
+var close = function() {
 $(".closeOverlay").on("click", function() {
     var $close = $(this);
-    $close.parent().parent().parent().parent().parent()
-    .prependTo(".movie-content").addClass('col-sm-6 col-md-6 col-lg-6 col-xl-6')
-    .removeAttr('id').hide().fadeIn(300);
-    $close.parent().parent().parent().parent().parent().parent().parent().parent().parent().find('#overlay').css('display', 'none');
-});
+    $close.closest('.movie-container').remove()
+    $('#overlay').css('display', 'none');
+})};
 
 
 /// LIKE BUTTON ///
@@ -54,7 +53,7 @@ $(".button").on("click", function() {
     /// print the new likes into input field
     $button.parent().find("input").val(newLikes).hide().slideDown(150);
     /// print likes into data-attribute - thx for the help, mario.
-    $button.parent().parent().parent().parent()[0].dataset.likes = newLikes; 
+    $button.closest()[0].dataset.likes = newLikes; 
 });
 
 

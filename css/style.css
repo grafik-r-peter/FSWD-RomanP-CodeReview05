@@ -21,9 +21,6 @@ body {
 #navbar-top {
   background: #343a40; }
 
-.dropdown {
-  text-align: right; }
-
 .headline {
   margin-top: 1rem; }
 
@@ -99,7 +96,7 @@ button:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7) !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
   z-index: 1; }
 
 #expandContent {
@@ -116,6 +113,20 @@ button:focus {
   -moz-box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.3);
   box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.3); }
 
+@media only screen and (max-width: 37.5em) {
+  #expandContent {
+    position: absolute;
+    width: 100% !important;
+    top: 10%;
+    left: 0%;
+    transform: none;
+    -ms-transform: none;
+    z-index: 2; }
+
+  #expandContent > div {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; } }
 .closeOverlay {
   display: none;
   float: right; }

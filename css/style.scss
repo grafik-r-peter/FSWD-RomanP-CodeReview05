@@ -45,9 +45,6 @@ body {
 	background: #343a40;
 }
 
-.dropdown {
-  text-align: right; }
-
 .headline {
   margin-top: 1rem;
 }
@@ -158,12 +155,15 @@ button:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.7)!important;
+    background-color: rgba(0,0,0,0.8)!important;
     z-index: 1;
 }
 
 #expandContent {
     position: fixed;
+    // overflow: scroll;
+    // overflow-x: hidden;
+    // max-height: 400px;
     width: 80% !important;
     top: 50%;
     left: 50%;
@@ -172,10 +172,32 @@ button:focus {
     z-index: 2;
 }
 
+
+
 #expandContent > div {
 	-webkit-box-shadow: 0px 0px 15px 5px rgba(255,255,255,0.3);
 	-moz-box-shadow: 0px 0px 15px 5px rgba(255,255,255,0.3);
 	box-shadow: 0px 0px 15px 5px rgba(255,255,255,0.3);
+}
+
+@media only screen and (max-width:37.5em) { 
+	#expandContent {
+    position: absolute;
+    // overflow: scroll;
+    // overflow-x: hidden;
+    // max-height: 400px;
+    width: 100% !important;
+    top: 10%;
+    left: 0%;
+    transform: none;
+    -ms-transform: none;
+    z-index: 2;
+}
+	#expandContent > div {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
 }
 
 .closeOverlay {
